@@ -1,5 +1,11 @@
 version: '3'
 services:
+  gdal:
+    build: gdal-docker
+    image: digitaalvlaanderen/gdal
+    ports:
+      - "8090:8090"
+
   nifi:
     image: apache/nifi:1.17.0
     build:
